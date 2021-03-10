@@ -1,0 +1,249 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "columna[0]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[1]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[2]",
+					"strict" : false
+				},
+				{
+					"name" : "columna[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_HS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_VS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "fila[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

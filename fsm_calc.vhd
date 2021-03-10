@@ -1,0 +1,168 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity fsm_calc is
+	port( signal reset_n	: in std_logic;
+			signal valido	: in std_logic;
+			signal clock_50: in std_logic;
+			signal valor	: in std_logic_vector(3 downto 0);
+			signal A_reg	: out std_logic_vector(3 downto 0);
+			signal Op_reg	: out std_logic_vector(3 downto 0);
+			signal B_reg	: out std_logic_vector(3 downto 0);
+			signal req		: out std_logic;
+			signal ack		: in std_logic;
+			signal enableA,enableB : out std_logic);
+end fsm_calc;
+
+architecture behav of fsm_calc is 
+	
+	------ ffd --------
+	signal fs_valido, valido_reg	: std_logic;
+	------ divisor ----
+	signal clk_o, clk_o_next, en 	: std_logic;
+	signal q_reg_DF, q_next_DF 	: std_logic_vector (18 downto 0);
+	------ registro ---
+	signal valor_reg					: std_logic_vector(3 downto 0);
+	------ comparadores ---
+	signal  eq_result, eq_op, eq_add, eq_sub, eq_mul, eq_div : std_logic; --eq_p,
+	------ FSM -----
+	signal en_A, en_Op, en_B 		: std_logic;
+
+	
+	component fsm_calc_slave is 
+		port(  signal reset_n	: in std_logic;
+			 signal clock_50	: in std_logic;
+			 signal en			: in std_logic;
+			 signal eq_op		: in std_logic;
+			 signal eq_result	: in std_logic;
+			 signal fs_valido	: in std_logic;
+			 signal ack			: in std_logic;
+			 signal req			: out std_logic;
+			 signal en_A		: out std_logic;
+			 signal en_B		: out std_logic;
+			 signal en_Op		: out std_logic);
+			 
+	end component;
+	
+	component divisor500mil is
+	port( reset_n, clk					: in std_logic;
+			salida							: out std_logic);
+	end component;
+	
+	component addsub is
+	generic (width	: natural := 4);
+	port( signal a: in std_logic_vector(width-1 downto 0);
+			signal b: in std_logic_vector(width-1 downto 0);
+			signal control : in std_logic;
+			signal s: out std_logic_vector(width-1 downto 0));
+end component;
+signal q_reg_DF_mas_uno  : std_logic_vector (18 downto 0);
+	
+
+
+begin
+  
+  add1: addsub
+			generic map(width => 19) 
+			port map(q_reg_DF,"0000000000000000001",'0',q_reg_DF_mas_uno);
+
+
+
+
+	-----------------------Divisor 500mil---------------------
+   DF: divisor500mil port map (reset_n, clock_50, en);
+	
+	----------------FFD--------
+	
+	process (clock_50, reset_n)
+	begin
+		if (reset_n ='0') then
+			valido_reg <='0';
+		elsif rising_edge(clock_50) then
+			if (en = '1') then
+				valido_reg <= valido;
+			end if;
+		end if;
+	end process;
+	
+	fs_valido <= valido_reg and not (valido);  ----Se agregó not () para obtener el negado del z del teclado
+	
+	------------- Registro ---------
+	
+	process (clock_50, reset_n)
+	begin
+		if (reset_n ='0') then
+			valor_reg <= (others => '0');
+		elsif rising_edge(clock_50) then
+			if (en = '1') then
+				valor_reg <= valor;
+			end if;
+		end if;
+	end process;
+	
+	-------------- Comparadores --------
+	
+	--eq_p 		<= '1' when (valor_reg = X"E") else
+				--	'0';
+					
+	eq_result<= '1' when (valor_reg = "1111") else
+					'0';
+					
+	eq_add	<= '1' when (valor_reg = "1010") else
+					'0';		  
+					
+	eq_sub 	<= '1' when (valor_reg = "1011") else
+					'0';
+					
+	eq_mul 	<= '1' when (valor_reg = "1100") else
+					'0'; 
+					
+	eq_div	<= '1' when (valor_reg = "1101") else
+					'0';
+					
+	eq_op <= (eq_add or eq_sub or eq_mul or eq_div);
+	
+	------------ Registros(salidas) --------
+	
+	process (clock_50, reset_n)
+	begin
+		if (reset_n ='0') then
+			A_reg <= (others => '0');
+		elsif rising_edge(clock_50) then
+			if (en_A = '1') then
+				A_reg <= Valor_reg;
+			end if;
+		end if;
+	end process;
+	
+	process (clock_50, reset_n)
+	begin
+		if (reset_n ='0') then
+			B_reg <= (others => '0');
+		elsif rising_edge(clock_50) then
+			if (en_B = '1') then
+				B_reg <= Valor_reg;
+			end if;
+		end if;
+	end process;
+	
+	process (clock_50, reset_n)
+	begin
+		if (reset_n ='0') then
+			Op_reg <= (others => '0');
+		elsif rising_edge(clock_50) then
+			if (en_Op = '1') then
+				Op_reg <= Valor_reg;
+			end if;
+		end if;
+	end process;
+	
+	------------- FSM ---------------------
+	
+	U: fsm_calc_slave port map ( reset_n,	clock_50, en, eq_op, eq_result, fs_valido, ack, req, en_A, en_B, en_Op);
+	enableA <= en_A;
+	enableB <= en_B;
+
+
+
+end behav;

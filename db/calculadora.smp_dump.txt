@@ -1,0 +1,77 @@
+
+State Machine - |calculadora|bin_bcd:bintobcd|st_reg
+Name st_reg.st13 st_reg.st12 st_reg.st11 st_reg.st10 st_reg.st9 st_reg.st8 st_reg.st7 st_reg.st6 st_reg.st5 st_reg.st4 st_reg.st3 st_reg.st2 st_reg.st1 st_reg.st0 
+st_reg.st0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+st_reg.st1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+st_reg.st2 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+st_reg.st3 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+st_reg.st4 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+st_reg.st5 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+st_reg.st6 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+st_reg.st7 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+st_reg.st8 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+st_reg.st9 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+st_reg.st10 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+st_reg.st11 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+st_reg.st12 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+st_reg.st13 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |calculadora|divider:divisor|st_reg
+Name st_reg.st5 st_reg.st4 st_reg.st3 st_reg.st2 st_reg.st1 st_reg.st0 
+st_reg.st0 0 0 0 0 0 0 
+st_reg.st1 0 0 0 0 1 1 
+st_reg.st2 0 0 0 1 0 1 
+st_reg.st3 0 0 1 0 0 1 
+st_reg.st4 0 1 0 0 0 1 
+st_reg.st5 1 0 0 0 0 1 
+
+State Machine - |calculadora|cir_add_sub:add_sub|state_reg
+Name state_reg.st3 state_reg.st2 state_reg.st1 state_reg.st0 
+state_reg.st0 0 0 0 0 
+state_reg.st1 0 0 1 1 
+state_reg.st2 0 1 0 1 
+state_reg.st3 1 0 0 1 
+
+State Machine - |calculadora|multiplicador:multiplicacion|state_reg
+Name state_reg.st7 state_reg.st6 state_reg.st5 state_reg.st4 state_reg.st3 state_reg.st2 state_reg.st1 state_reg.st0 
+state_reg.st0 0 0 0 0 0 0 0 0 
+state_reg.st1 0 0 0 0 0 0 1 1 
+state_reg.st2 0 0 0 0 0 1 0 1 
+state_reg.st3 0 0 0 0 1 0 0 1 
+state_reg.st4 0 0 0 1 0 0 0 1 
+state_reg.st5 0 0 1 0 0 0 0 1 
+state_reg.st6 0 1 0 0 0 0 0 1 
+state_reg.st7 1 0 0 0 0 0 0 1 
+
+State Machine - |calculadora|controlador_op:controlador|state_reg
+Name state_reg.st17 state_reg.st16 state_reg.st15 state_reg.st14 state_reg.st13 state_reg.st12 state_reg.st11 state_reg.st10 state_reg.st9 state_reg.st8 state_reg.st7 state_reg.st6 state_reg.st5 state_reg.st4 state_reg.st3 state_reg.st2 state_reg.st1 state_reg.st0 
+state_reg.st0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state_reg.st1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state_reg.st2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state_reg.st3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state_reg.st4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state_reg.st5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state_reg.st6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state_reg.st7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state_reg.st8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state_reg.st9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state_reg.st10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state_reg.st11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state_reg.st12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state_reg.st13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state_reg.st14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state_reg.st15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state_reg.st16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state_reg.st17 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |calculadora|fsm_calc:fsm_calcu|fsm_calc_slave:U|st_reg
+Name st_reg.st_wait st_reg.st_eop st_reg.st_w_b st_reg.st_b st_reg.st_w_op st_reg.st_op st_reg.st_w_a st_reg.st_a st_reg.st_idle 
+st_reg.st_idle 0 0 0 0 0 0 0 0 0 
+st_reg.st_a 0 0 0 0 0 0 0 1 1 
+st_reg.st_w_a 0 0 0 0 0 0 1 0 1 
+st_reg.st_op 0 0 0 0 0 1 0 0 1 
+st_reg.st_w_op 0 0 0 0 1 0 0 0 1 
+st_reg.st_b 0 0 0 1 0 0 0 0 1 
+st_reg.st_w_b 0 0 1 0 0 0 0 0 1 
+st_reg.st_eop 0 1 0 0 0 0 0 0 1 
+st_reg.st_wait 1 0 0 0 0 0 0 0 1 

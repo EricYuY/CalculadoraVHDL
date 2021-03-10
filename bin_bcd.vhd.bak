@@ -1,0 +1,268 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity bin_bcd is--------CONVERTIDOR BIN A BCD DE 5DIGITOS 99999
+	--generic (width:natural:= 16);
+	port( clk, rst_n: in std_logic;
+			binario : in std_logic_vector(16 downto 0);
+			d4 : out std_logic_vector(3 downto 0);
+			d3 : out std_logic_vector(3 downto 0);
+			d2 : out std_logic_vector(3 downto 0);
+			d1 : out std_logic_vector(3 downto 0);
+			d0 : out std_logic_vector(3 downto 0)); --REALIZAR EL CALCULO RESPECTIVO PARA EL NUMERO DE DÍGITOS
+end bin_bcd;
+
+architecture behav of bin_bcd is
+	type machine is (st0, st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11,st12,st13);
+	signal binary_num :std_logic_vector(19 downto 0);
+	signal st_reg, st_next : machine;
+	attribute syn_enco : string;
+	attribute syn_enco of machine: type is "safe";
+	
+	signal en_b, en_u, en_d, en_c, en_m, en_dm : std_logic;
+	signal bin, bin_next1, bin_next2 : std_logic_vector(19 downto 0);
+	signal unidad, unidad_next1,unidad_next2,unidad_next3 : std_logic_Vector (3 downto 0);
+	signal decena, decena_next1,decena_next2,decena_next3 : std_logic_Vector (3 downto 0);
+	signal centena, centena_next1,centena_next2,centena_next3 : std_logic_Vector (3 downto 0);
+	signal miles, miles_next1,miles_next2,miles_next3 : std_logic_Vector (3 downto 0);
+	signal diezmiles,diezmiles_next1,diezmiles_next2,diezmiles_next3 : std_logic_Vector (3 downto 0);
+	constant TRES : std_logic_vector (3 downto 0):= "0011";
+	constant CUATRO : std_logic_vector (3 downto 0):= "0100";
+	constant ZEROS : std_logic_vector (3 downto 0):= "0000";
+	constant ZEROs_20 : std_logic_vector (19 downto 0):= (others => '0');
+	signal contador_bits, contador_bits_next1, contador_bits_next2, temp_contador_bits: std_logic_vector(4 downto 0);
+	
+	signal temp_bin, temp0 : std_logic_vector (19 downto 0);
+	signal temp1,temp2,temp3,temp4,temp5,temp6,temp7,temp8,temp9,temp10,temp11 : std_logic_Vector (3 downto 0);
+	signal sel_0, sel_1, sel_2, sel_3, sel_4, sel_5, sel_s,sel_contador : std_logic;
+	signal cond0, cond1, cond2, cond3, cond4,cond5 : std_logic;
+	component addsub is
+			generic (width	: natural := 4);
+			port( signal a: in std_logic_vector(width-1 downto 0);
+					signal b: in std_logic_vector(width-1 downto 0);
+					signal control : in std_logic;
+					signal s: out std_logic_vector(width-1 downto 0));
+	end component;
+			
+	
+begin
+	binary_num <= "000"&binario;
+	----------REGISTRO---------
+	process (clk, rst_n)
+	begin
+		if (rst_n = '0') then
+			bin <= (others =>'0');
+			unidad <= (others =>'0');
+			decena <= (others =>'0');
+			centena <= (others =>'0');
+			miles <= (others =>'0');
+			diezmiles <= (others =>'0');
+			st_reg <= st0;
+			contador_bits <= (others =>'0');
+		elsif rising_edge(clk) then
+			bin <= bin_next1;
+			unidad <= unidad_next1;
+			decena <= decena_next1;
+			centena <= centena_next1;
+			miles <= miles_next1;
+			diezmiles<= diezmiles_next1;
+			st_reg <= st_next;
+			contador_bits <= contador_bits_next1;
+		end if;
+	end process;
+	----------Logica combinacional-------
+	
+	contador_bits_next1 <= "00000" when (sel_0='1') else
+								 contador_bits_next2;
+	U_contador: addsub generic map (width=>5) port map(contador_bits,"00001",'0',temp_contador_bits);
+	
+	contador_bits_next2 <= temp_contador_bits when (sel_contador='1') else
+								  contador_bits;
+	
+	
+	
+	
+	temp_bin <= binary_num (16 downto 0) & "000"; --------MODIFICAR PARA UAMENTAR DIGITOS
+	bin_next1 <= temp_bin when (sel_0 ='1') else
+					 bin_next2;
+	
+	temp0 <= bin (18 downto 0) & '0';			
+	bin_next2 <= temp0 when (sel_s ='1') else
+					 bin;
+	
+	temp1 <= '0' & binary_num(19 downto 17);  --------MODIFICAR PARA UAMENTAR DIGITOS
+	unidad_next1 <= temp1 when (sel_0 = '1') else
+						 unidad_next2;
+	U1: addsub generic map (width => 4)port map (TRES,unidad,'0',temp2);
+	unidad_next2 <=  temp2 when (sel_1 = '1')else
+						  unidad_next3;
+	
+	temp3 <= unidad (2 downto 0)& bin (19); 
+	unidad_next3 <= temp3 when (sel_s = '1') else
+						 unidad;
+	
+	decena_next1 <= ZEROS when (sel_0 = '1') else
+						decena_next2;
+	
+	U2: addsub generic map (width => 4)port map (TRES,decena,'0',temp4);
+	decena_next2 <= temp4 when (sel_2 = '1') else
+						decena_next3;
+	
+	temp5 <= decena (2 downto 0) & unidad(3);
+	decena_next3 <= temp5 when (sel_s = '1') else
+						decena;
+
+	centena_next1 <= ZEROS when (sel_0 = '1') else
+						  centena_next2;
+	
+	U3: addsub generic map (width => 4)port map (TRES,centena,'0',temp6);
+	centena_next2 <= temp6 when (sel_3 = '1') else
+						  centena_next3;
+	
+	temp7 <= centena (2 downto 0) & decena(3);
+	centena_next3 <= temp7 when (sel_s = '1') else
+						  centena;
+						
+	miles_next1 <= ZEROS when (sel_0 = '1') else
+						miles_next2;
+
+	U4: addsub generic map (width => 4)port map (TRES,miles,'0',temp8);
+	miles_next2 <= temp8 when (sel_4 = '1') else
+						miles_next3;
+	
+	temp9 <= miles (2 downto 0) & centena(3);
+	miles_next3 <= temp9 when (sel_s = '1') else
+						miles;
+						
+	diezmiles_next1 <= ZEROS when (sel_0 = '1') else
+				          diezmiles_next2;
+
+	U5: addsub generic map (width => 4)port map (TRES,diezmiles,'0',temp10);
+	diezmiles_next2 <= temp10 when (sel_5 = '1') else
+						    diezmiles_next3;
+	
+	temp11 <= diezmiles (2 downto 0) & miles(3);
+	diezmiles_next3 <= temp11 when (sel_s = '1') else
+						    diezmiles;
+	
+	cond0 <= '0' when ( contador_bits = "10001") else
+				'1';
+	cond1 <= '1'when (unidad > CUATRO) else  --si es mayor que cuatro se le suma 3
+				'0';
+	cond2 <= '1'when (decena > CUATRO) else
+				'0';
+	cond3 <= '1'when (centena > CUATRO) else
+				'0';
+	cond4 <= '1'when (miles > CUATRO) else
+				'0';
+	cond5 <= '1' when (diezmiles > CUATRO)else
+				'0';
+
+				
+	--------fsm-----------
+	
+	comb: process (st_reg,cond0, cond1, cond2, cond3, cond4,cond5)
+	begin
+		en_b <= '0';
+		en_u <= '0';
+		en_d <= '0';
+		en_c <= '0';
+		en_m <= '0';
+		en_dm <= '0';
+		sel_0 <= '0';
+		sel_1 <= '0';
+		sel_2 <= '0';
+		sel_3 <= '0';
+		sel_4 <= '0';
+		sel_5 <= '0';
+		sel_s <= '0';
+		sel_contador <='0';
+		case st_reg is
+		
+		when st0 =>
+			sel_0 <= '1';
+			en_b <= '1';
+			en_u <= '1';
+			en_d <= '1';
+			en_c <= '1';
+			en_m <= '1';
+			en_dm <= '1';
+			st_next <= st1;
+		when st1 =>
+			if (cond0 = '0') then
+				st_next <= st12;
+			elsif (cond1 = '1') then
+				st_next <= st2;
+			else
+				st_next <= st3;
+			end if;			
+		when st2 =>
+			en_u <= '1';
+			sel_1 <= '1';
+			st_next <= st3;		
+		when st3 =>
+			if (cond2 = '1') then
+				st_next <= st4;
+			else
+				st_next <= st5;
+			end if;
+		when st4 =>
+			en_d <= '1';
+			sel_2 <= '1';
+			st_next <= st5;
+		when st5 =>
+			if (cond3 = '1') then
+				st_next <= st6;
+			else
+				st_next <= st7;
+			end if;
+		when st6 =>
+			en_c <= '1';
+			sel_3 <= '1';
+			st_next <= st7;
+		when st7 =>
+			if (cond4 = '1') then
+				st_next <= st8;
+			else
+				st_next <= st9;
+			end if;		
+		when st8 =>
+			en_m <= '1';
+			sel_4 <= '1';
+			st_next <= st9;
+			
+		when st9 =>
+			if (cond5 = '1') then
+				st_next <= st10;
+			else
+				st_next <= st11;
+			end if;
+		when st10 =>
+			en_dm <= '1';
+			sel_5 <= '1';
+			st_next <= st11;				
+		when st11 =>
+			sel_s <= '1';
+			en_b <= '1';
+			en_u <= '1';
+			en_d <= '1';
+			en_c <= '1';
+			en_m <= '1';
+			en_dm <= '1';
+			st_next <= st1;
+			sel_contador <='1';
+		when st12 =>	
+			
+		when others =>
+			st_next <= st0;
+		end case;
+	end process comb;
+
+	d4 <= diezmiles;
+	d3<= miles;
+	d2 <= centena;
+	d1 <= decena;
+	d0 <= unidad;
+	
+	
+end behav;

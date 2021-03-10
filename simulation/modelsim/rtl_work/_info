@@ -1,0 +1,774 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/temp/Calculadora/simulation/modelsim
+Eaddsub
+Z1 w1543527233
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/temp/Calculadora/addsub.vhd
+Z5 FC:/temp/Calculadora/addsub.vhd
+l0
+L4
+V>5eXYBZ8dog73E^mK;0Am0
+!s100 Z`2WbE<o>9=kZE@OO;QVN2
+Z6 OV;C;10.4b;61
+31
+Z7 !s110 1543935931
+!i10b 1
+Z8 !s108 1543935931.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/addsub.vhd|
+Z10 !s107 C:/temp/Calculadora/addsub.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1
+Aestructura
+R2
+R3
+DEx4 work 6 addsub 0 22 >5eXYBZ8dog73E^mK;0Am0
+l20
+L12
+V0Q2EC<G34KnJad3MISI<g3
+!s100 4I>f>cZ]noIE6z;?Gm27@2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebcd_binary
+Z13 w1543630069
+R2
+R3
+R0
+Z14 8C:/temp/Calculadora/bcd_binary.vhd
+Z15 FC:/temp/Calculadora/bcd_binary.vhd
+l0
+L4
+V06CaTEe[^k2nRKbTGli?W1
+!s100 =_;@^Y521];Ae34D4]KY92
+R6
+31
+Z16 !s110 1543935934
+!i10b 1
+Z17 !s108 1543935934.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/bcd_binary.vhd|
+Z19 !s107 C:/temp/Calculadora/bcd_binary.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 10 bcd_binary 0 22 06CaTEe[^k2nRKbTGli?W1
+l32
+L13
+V=4J2RO?S<N7`k9<EI0Q?>0
+!s100 f9m^;[ln6D^l5f3`n<?A>0
+R6
+31
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Ebin_bcd
+Z20 w1543870851
+R2
+R3
+R0
+Z21 8C:/temp/Calculadora/bin_bcd.vhd
+Z22 FC:/temp/Calculadora/bin_bcd.vhd
+l0
+L4
+Vae6Jo;0[Lh`LMM]ANhOH;2
+!s100 O]?=O6dHcQQ>[XkVDVzl<3
+R6
+31
+Z23 !s110 1543935933
+!i10b 1
+Z24 !s108 1543935933.000000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/bin_bcd.vhd|
+Z26 !s107 C:/temp/Calculadora/bin_bcd.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 7 bin_bcd 0 22 ae6Jo;0[Lh`LMM]ANhOH;2
+l53
+L15
+Vg8nGD[QP3E?Wl:=<9[VXn1
+!s100 deK_Z=YOfJ7bD:WUi_0;T0
+R6
+31
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Ecalculadora
+Z27 w1543935794
+Z28 DPx4 work 11 operaciones 0 22 6>bZV2E=>24bE60zmY8792
+R2
+R3
+R0
+Z29 8C:/temp/Calculadora/calculadora.vhd
+Z30 FC:/temp/Calculadora/calculadora.vhd
+l0
+L5
+VU@3[aiR7zm4Rd;z`_6dJB3
+!s100 41MHJ@dXOGNO0H;Bg?n7X0
+R6
+31
+R16
+!i10b 1
+R17
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/calculadora.vhd|
+Z32 !s107 C:/temp/Calculadora/calculadora.vhd|
+!i113 1
+R11
+R12
+Aarch
+R28
+R2
+R3
+DEx4 work 11 calculadora 0 22 U@3[aiR7zm4Rd;z`_6dJB3
+l200
+L17
+V03l6Y>UZZb`0_B]mn`YC31
+!s100 dTBbkBA`kKBE?9fIGZQ<h0
+R6
+31
+R16
+!i10b 1
+R17
+R31
+R32
+!i113 1
+R11
+R12
+Ecalculadora_vhd_tst
+Z33 w1543876502
+R2
+R3
+R0
+Z34 8C:/temp/Calculadora/simulation/modelsim/calculadora.vht
+Z35 FC:/temp/Calculadora/simulation/modelsim/calculadora.vht
+l0
+L31
+V7QQ<[ISMcPiBZkC1<?:FE3
+!s100 9=@Cmco3UQBYS:EOleCU91
+R6
+31
+R16
+!i10b 1
+R17
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/simulation/modelsim/calculadora.vht|
+Z37 !s107 C:/temp/Calculadora/simulation/modelsim/calculadora.vht|
+!i113 1
+R11
+R12
+Acalculadora_arch
+R2
+R3
+DEx4 work 19 calculadora_vhd_tst 0 22 7QQ<[ISMcPiBZkC1<?:FE3
+l60
+L33
+VV;CVLGbL=[2VKNBagMM3Z3
+!s100 a2G639hijC]U5bNBRTXc<0
+R6
+31
+R16
+!i10b 1
+R17
+R36
+R37
+!i113 1
+R11
+R12
+Ecir_add_sub
+Z38 w1543625063
+R2
+R3
+R0
+Z39 8C:/temp/Calculadora/cir_add_sub.vhd
+Z40 FC:/temp/Calculadora/cir_add_sub.vhd
+l0
+L4
+V]=bTN[e27z7EI>`1ZK<XM2
+!s100 F=:lVkUACz6BUN[`j2imj2
+R6
+31
+Z41 !s110 1543935932
+!i10b 1
+Z42 !s108 1543935932.000000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/cir_add_sub.vhd|
+Z44 !s107 C:/temp/Calculadora/cir_add_sub.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 11 cir_add_sub 0 22 ]=bTN[e27z7EI>`1ZK<XM2
+l51
+L16
+VFno6BN`e4aE6TBcBShUc=3
+!s100 lbDIPjD:=AzV6zhPg:P@U3
+R6
+31
+R41
+!i10b 1
+R42
+R43
+R44
+!i113 1
+R11
+R12
+Econtrolador_op
+Z45 w1543871017
+R2
+R3
+R0
+Z46 8C:/temp/Calculadora/controlador_op.vhd
+Z47 FC:/temp/Calculadora/controlador_op.vhd
+l0
+L4
+VGR<7:KBWDTaDW=JRS2=li1
+!s100 PA5n_Azl0nQ>6S_z?EzD53
+R6
+31
+R23
+!i10b 1
+R24
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/controlador_op.vhd|
+Z49 !s107 C:/temp/Calculadora/controlador_op.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 14 controlador_op 0 22 GR<7:KBWDTaDW=JRS2=li1
+l59
+L23
+VCL^;a^dzjU5I;_]C`_>gb3
+!s100 G<RAjS@U8E1`<VNXYU=Gf1
+R6
+31
+R23
+!i10b 1
+R24
+R48
+R49
+!i113 1
+R11
+R12
+Edatapath
+Z50 w1543868433
+R2
+R3
+R0
+Z51 8C:/temp/Calculadora/datapath.vhd
+Z52 FC:/temp/Calculadora/datapath.vhd
+l0
+L4
+V_<WG7[Io3<HzY;A]iX6_`3
+!s100 jIz37QIW0kJ5JCm:4>mPT0
+R6
+31
+R23
+!i10b 1
+R24
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/datapath.vhd|
+Z54 !s107 C:/temp/Calculadora/datapath.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 8 datapath 0 22 _<WG7[Io3<HzY;A]iX6_`3
+l29
+L21
+V7>J0KJJi]>]B=8VIOZ:;J3
+!s100 ]2N6B<^6UD1Lz1P361NWP1
+R6
+31
+R23
+!i10b 1
+R24
+R53
+R54
+!i113 1
+R11
+R12
+Edivider
+Z55 w1543725006
+R2
+R3
+R0
+Z56 8C:/temp/Calculadora/divider.vhd
+Z57 FC:/temp/Calculadora/divider.vhd
+l0
+L6
+V;b4@L33AhbicIdV7R=4n:2
+!s100 6k_<=fHTkFfM:e31AhEUD1
+R6
+31
+R23
+!i10b 1
+R24
+Z58 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/divider.vhd|
+Z59 !s107 C:/temp/Calculadora/divider.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 7 divider 0 22 ;b4@L33AhbicIdV7R=4n:2
+l56
+L16
+VCZOYXOSWj?2EizocUfh6X1
+!s100 Y_KUKiWFUgA>56MDz^U3U3
+R6
+31
+R23
+!i10b 1
+R24
+R58
+R59
+!i113 1
+R11
+R12
+Edivisor500mil
+Z60 w1543896381
+R2
+R3
+R0
+Z61 8C:/temp/Calculadora/divisor500mil.vhd
+Z62 FC:/temp/Calculadora/divisor500mil.vhd
+l0
+L4
+V]cYW<Ig=NkKEUdjnUM^GC3
+!s100 n4X437`oekX7z9`f7cUX91
+R6
+31
+R23
+!i10b 1
+R24
+Z63 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/divisor500mil.vhd|
+Z64 !s107 C:/temp/Calculadora/divisor500mil.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 13 divisor500mil 0 22 ]cYW<Ig=NkKEUdjnUM^GC3
+l19
+L10
+VUgjb:WOmVP@N[F<QEQ@=b1
+!s100 5IAJInb@<h95@z5h9nWMS3
+R6
+31
+R23
+!i10b 1
+R24
+R63
+R64
+!i113 1
+R11
+R12
+Effd
+Z65 w1543624558
+R2
+R3
+R0
+Z66 8C:/temp/Calculadora/ffd.vhd
+Z67 FC:/temp/Calculadora/ffd.vhd
+l0
+L4
+V9GBVU9BMSQ>FeS0[BPk3=3
+!s100 ;;FC6A:F[L6@U@91E6RPz3
+R6
+31
+R41
+!i10b 1
+R42
+Z68 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/ffd.vhd|
+Z69 !s107 C:/temp/Calculadora/ffd.vhd|
+!i113 1
+R11
+R12
+Aarchi
+R2
+R3
+DEx4 work 3 ffd 0 22 9GBVU9BMSQ>FeS0[BPk3=3
+l16
+L13
+V3_7dO`FBz0INFm1Ka2:cX1
+!s100 :_UmZfL?_bEYAi?ZLzX]o1
+R6
+31
+R41
+!i10b 1
+R42
+R68
+R69
+!i113 1
+R11
+R12
+Efsm_calc
+Z70 w1543896492
+R2
+R3
+R0
+Z71 8C:/temp/Calculadora/fsm_calc.vhd
+Z72 FC:/temp/Calculadora/fsm_calc.vhd
+l0
+L4
+VHD^]D3MF>0hJffPIQ`Xa_2
+!s100 Z^B[KjJ^I^=]NHo;dOHG63
+R6
+31
+R7
+!i10b 1
+R8
+Z73 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/fsm_calc.vhd|
+Z74 !s107 C:/temp/Calculadora/fsm_calc.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 8 fsm_calc 0 22 HD^]D3MF>0hJffPIQ`Xa_2
+l63
+L17
+V52n[Fm=Q3g3ZU1I1h64kb2
+!s100 ZdUnTP=J0DT1K=8hKU5lN1
+R6
+31
+R7
+!i10b 1
+R8
+R73
+R74
+!i113 1
+R11
+R12
+Efsm_calc_slave
+Z75 w1543623771
+R2
+R3
+R0
+Z76 8C:/temp/Calculadora/fsm_calc_slave.vhd
+Z77 FC:/temp/Calculadora/fsm_calc_slave.vhd
+l0
+L4
+VaTONH88K]A_P7ZA8PU3bo0
+!s100 7?P9AkYTcSI5dS3D>mAUH0
+R6
+31
+R41
+!i10b 1
+R8
+Z78 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/fsm_calc_slave.vhd|
+Z79 !s107 C:/temp/Calculadora/fsm_calc_slave.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 14 fsm_calc_slave 0 22 aTONH88K]A_P7ZA8PU3bo0
+l25
+L18
+VZH2_?iQQAcVYo4Y9glkI[3
+!s100 WEGHO9MjUmk_oQP8HzN]L2
+R6
+31
+R41
+!i10b 1
+R8
+R78
+R79
+!i113 1
+R11
+R12
+Efulladder
+Z80 w1543527213
+R2
+R3
+R0
+Z81 8C:/temp/Calculadora/fulladder.vhd
+Z82 FC:/temp/Calculadora/fulladder.vhd
+l0
+L4
+VSYE2KbBjC=gEg6m@<XYeO1
+!s100 MelZ@JU_bW4@dGCIDoBYZ3
+R6
+31
+R7
+!i10b 1
+R8
+Z83 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/fulladder.vhd|
+Z84 !s107 C:/temp/Calculadora/fulladder.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 9 fulladder 0 22 SYE2KbBjC=gEg6m@<XYeO1
+l10
+L9
+VDMn7T:iI`MLUBjbCmgiFe3
+!s100 O8]X4JKBYaCBo[G<MIYhG3
+R6
+31
+R7
+!i10b 1
+R8
+R83
+R84
+!i113 1
+R11
+R12
+Ehexa
+Z85 w1543628777
+R2
+R3
+R0
+Z86 8C:/temp/Calculadora/hexa.vhd
+Z87 FC:/temp/Calculadora/hexa.vhd
+l0
+L5
+VA523?oijAT^8j;dRR18IQ1
+!s100 Qeljlo:k9@c^gA@S6B8zT3
+R6
+31
+R23
+!i10b 1
+R24
+Z88 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/hexa.vhd|
+Z89 !s107 C:/temp/Calculadora/hexa.vhd|
+!i113 1
+R11
+R12
+Aarch2
+R2
+R3
+DEx4 work 4 hexa 0 22 A523?oijAT^8j;dRR18IQ1
+l10
+L9
+V^NoESZLB7RJ77eM[nD=C42
+!s100 7mN@YZJKD>Xnd??i[72CA2
+R6
+31
+R23
+!i10b 1
+R24
+R88
+R89
+!i113 1
+R11
+R12
+Emultiplicador
+Z90 w1543624524
+R2
+R3
+R0
+Z91 8C:/temp/Calculadora/multiplicador.vhd
+Z92 FC:/temp/Calculadora/multiplicador.vhd
+l0
+L4
+VmVLPU6MYO1l^l`=<h`GS]2
+!s100 FnWVOXWC<I^iadAI19VJ=2
+R6
+31
+R41
+!i10b 1
+R42
+Z93 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/multiplicador.vhd|
+Z94 !s107 C:/temp/Calculadora/multiplicador.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 13 multiplicador 0 22 mVLPU6MYO1l^l`=<h`GS]2
+l64
+L15
+VYo_H8H3o[=;d>iHmJF@P81
+!s100 o8;AXQZNjZACiAaaGz@>31
+R6
+31
+R41
+!i10b 1
+R42
+R93
+R94
+!i113 1
+R11
+R12
+Poperaciones
+R2
+R3
+w1543625568
+R0
+8C:/temp/Calculadora/operaciones.vhd
+FC:/temp/Calculadora/operaciones.vhd
+l0
+L3
+V6>bZV2E=>24bE60zmY8792
+!s100 l8MWGMWY8G8gI6KBYTPTF3
+R6
+31
+R7
+!i10b 1
+!s108 1543935930.000000
+!s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/operaciones.vhd|
+!s107 C:/temp/Calculadora/operaciones.vhd|
+!i113 1
+R11
+R12
+Ereg_des
+Z95 w1543865008
+R2
+R3
+R0
+Z96 8C:/temp/Calculadora/reg_des.vhd
+Z97 FC:/temp/Calculadora/reg_des.vhd
+l0
+L3
+V?MTmGEDb_9Ba9A=7iaF1J3
+!s100 RJUMY[RKF?FWeH^JT;`KZ3
+R6
+31
+R41
+!i10b 1
+R42
+Z98 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/reg_des.vhd|
+Z99 !s107 C:/temp/Calculadora/reg_des.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 7 reg_des 0 22 ?MTmGEDb_9Ba9A=7iaF1J3
+l35
+L15
+VU]>Vejgl5B`?E7L[XUjJY0
+!s100 ?23T0kZD26oD`ocWnjAAE3
+R6
+31
+R41
+!i10b 1
+R42
+R98
+R99
+!i113 1
+R11
+R12
+Eregistro
+Z100 w1543891082
+R2
+R3
+R0
+Z101 8C:/temp/Calculadora/registro.vhd
+Z102 FC:/temp/Calculadora/registro.vhd
+l0
+L4
+VQUa1RQc<BK`nUQJQUmMc:0
+!s100 _2_Mc_DPZmT[mNaA<ZOH42
+R6
+31
+R41
+!i10b 1
+R42
+Z103 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/registro.vhd|
+Z104 !s107 C:/temp/Calculadora/registro.vhd|
+!i113 1
+R11
+R12
+Aarchi
+R2
+R3
+DEx4 work 8 registro 0 22 QUa1RQc<BK`nUQJQUmMc:0
+l17
+L14
+V;Qo`zh16In;?I9gja?3hM0
+!s100 Y5a6mhjX8:cnlHEBhHSB20
+R6
+31
+R41
+!i10b 1
+R42
+R103
+R104
+!i113 1
+R11
+R12
+Eteclado_calc
+Z105 w1543896376
+R2
+R3
+R0
+Z106 8C:/temp/Calculadora/teclado_calc.vhd
+Z107 FC:/temp/Calculadora/teclado_calc.vhd
+l0
+L5
+V8@mg9:4NEkHE7mm>h^7EI1
+!s100 J;J^o`=QJ`Kh<T^f?gmFg2
+R6
+31
+R7
+!i10b 1
+R8
+Z108 !s90 -reportprogress|300|-93|-work|work|C:/temp/Calculadora/teclado_calc.vhd|
+Z109 !s107 C:/temp/Calculadora/teclado_calc.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 12 teclado_calc 0 22 8@mg9:4NEkHE7mm>h^7EI1
+l45
+L13
+VKG2EEI`giePDIOD9QWH470
+!s100 48VR?^Z0X@_3[G:nha34S2
+R6
+31
+R7
+!i10b 1
+R8
+R108
+R109
+!i113 1
+R11
+R12

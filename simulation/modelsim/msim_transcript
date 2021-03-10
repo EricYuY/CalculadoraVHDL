@@ -1,0 +1,275 @@
+# ERROR: No extended dataflow license exists
+# do calculadora_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/temp/Calculadora/operaciones.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:30 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/operaciones.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package operaciones
+# End time: 10:05:31 on Dec 04,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/teclado_calc.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:31 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/teclado_calc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity teclado_calc
+# -- Compiling architecture behav of teclado_calc
+# End time: 10:05:31 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/fulladder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:31 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/fulladder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fulladder
+# -- Compiling architecture structural of fulladder
+# End time: 10:05:31 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/addsub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:31 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/addsub.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity addsub
+# -- Compiling architecture estructura of addsub
+# End time: 10:05:31 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/fsm_calc.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:31 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/fsm_calc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fsm_calc
+# -- Compiling architecture behav of fsm_calc
+# End time: 10:05:31 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/fsm_calc_slave.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:31 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/fsm_calc_slave.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fsm_calc_slave
+# -- Compiling architecture behav of fsm_calc_slave
+# End time: 10:05:32 on Dec 04,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/registro.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:32 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/registro.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registro
+# -- Compiling architecture archi of registro
+# End time: 10:05:32 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/reg_des.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:32 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/reg_des.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_des
+# -- Compiling architecture arch of reg_des
+# End time: 10:05:32 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/multiplicador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:32 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/multiplicador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity multiplicador
+# -- Compiling architecture arch of multiplicador
+# End time: 10:05:32 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/ffd.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:32 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/ffd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ffd
+# -- Compiling architecture archi of ffd
+# End time: 10:05:32 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/cir_add_sub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:32 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/cir_add_sub.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity cir_add_sub
+# -- Compiling architecture arch of cir_add_sub
+# End time: 10:05:33 on Dec 04,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/divider.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:33 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/divider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity divider
+# -- Compiling architecture behav of divider
+# End time: 10:05:33 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/controlador_op.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:33 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/controlador_op.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity controlador_op
+# -- Compiling architecture arch of controlador_op
+# End time: 10:05:33 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/datapath.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:33 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity datapath
+# -- Compiling architecture arch of datapath
+# End time: 10:05:33 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/bin_bcd.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:33 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/bin_bcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bin_bcd
+# -- Compiling architecture behav of bin_bcd
+# End time: 10:05:33 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/hexa.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:33 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/hexa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hexa
+# -- Compiling architecture arch2 of hexa
+# End time: 10:05:33 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/divisor500mil.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:33 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/divisor500mil.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity divisor500mil
+# -- Compiling architecture arch of divisor500mil
+# End time: 10:05:33 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/bcd_binary.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:34 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/bcd_binary.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bcd_binary
+# -- Compiling architecture arch of bcd_binary
+# End time: 10:05:34 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/temp/Calculadora/calculadora.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:34 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/calculadora.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package operaciones
+# -- Compiling entity calculadora
+# -- Compiling architecture arch of calculadora
+# End time: 10:05:34 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/temp/Calculadora/simulation/modelsim/calculadora.vht}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:05:34 on Dec 04,2018
+# vcom -reportprogress 300 -93 -work work C:/temp/Calculadora/simulation/modelsim/calculadora.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity calculadora_vhd_tst
+# -- Compiling architecture calculadora_arch of calculadora_vhd_tst
+# ** Warning: C:/temp/Calculadora/simulation/modelsim/calculadora.vht(82): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/temp/Calculadora/simulation/modelsim/calculadora.vht(93): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 10:05:34 on Dec 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  calculadora_vhd_tst
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" calculadora_vhd_tst 
+# Start time: 10:05:35 on Dec 04,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.calculadora_vhd_tst(calculadora_arch)
+# Loading work.operaciones
+# Loading work.calculadora(arch)
+# Loading work.teclado_calc(behav)
+# Loading work.addsub(estructura)
+# Loading work.fulladder(structural)
+# Loading work.fsm_calc(behav)
+# Loading work.divisor500mil(arch)
+# Loading work.fsm_calc_slave(behav)
+# Loading work.ffd(archi)
+# Loading work.reg_des(arch)
+# Loading work.registro(archi)
+# Loading work.bcd_binary(arch)
+# Loading work.controlador_op(arch)
+# Loading work.datapath(arch)
+# Loading work.multiplicador(arch)
+# Loading work.cir_add_sub(arch)
+# Loading work.divider(behav)
+# Loading work.bin_bcd(behav)
+# Loading work.hexa(arch2)
+# ** Warning: Design size of 11683 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 us
+# End time: 10:07:29 on Dec 04,2018, Elapsed time: 0:01:54
+# Errors: 0, Warnings: 1
