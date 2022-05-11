@@ -1,1 +1,5 @@
+Hardware description for FPGA
+
+Calculator implementation - with VGA graphic UI
+
 Main file --> calculadora.vhd
